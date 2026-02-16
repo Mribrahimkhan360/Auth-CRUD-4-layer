@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/',[AuthController::class,'index']);
 Route::post('/',[AuthController::class,'authLogin'])->name('auth.login');
+Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+    Route::resource('products', ProductController::class);
+
 });

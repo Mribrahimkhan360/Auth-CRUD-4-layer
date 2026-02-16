@@ -31,4 +31,9 @@ class AuthService
 
     }
 
+    public function logout()
+    {
+        return $this->authRepository->logout();
+    }
+
 }

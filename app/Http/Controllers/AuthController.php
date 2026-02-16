@@ -32,6 +32,14 @@ class AuthController extends Controller
 
         return back()->withErrors(['email' => $result['message']]);
     }
+    public function logout(Request $request)
+    {
+        $this->authService->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
     public function dashboard()
     {
         return view('product.index');
