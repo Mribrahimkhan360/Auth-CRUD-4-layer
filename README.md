@@ -6,3 +6,6 @@
 composer create-project "laravel/laravel:^10.0" Auth-CRUD
 </code>
 # Auth-CRUD-4-layer
+
+<h2>Login page</h2>
+<p>Login page design</p>
