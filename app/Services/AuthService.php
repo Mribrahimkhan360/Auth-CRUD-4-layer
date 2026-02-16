@@ -18,14 +18,17 @@ class AuthService
     }
 
 
-    public function AuthLogin(string $email, string $password) // loginUser
+    public function AuthLogin(string $email, string $password)
     {
         $user = $this->authRepository->findByEmail($email);
 
         if ($user && Hash::check($password, $user->password)) {
+            Auth::login($user); // login for using
             return ['status' => true, 'message' => 'Login successful'];
         }
 
         return ['status' => false, 'message' => 'Invalid credentials'];
+
     }
+
 }

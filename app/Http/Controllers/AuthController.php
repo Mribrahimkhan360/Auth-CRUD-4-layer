@@ -22,16 +22,15 @@ class AuthController extends Controller
     }
     public function authLogin(AuthLoginRequest $request)
     {
-        $email = $request->email;
-        $password = $request->password;
+        $credentials = $request->only('email', 'password');
 
-        $loginResult = $this->authService->AuthLogin($email, $password);
+        $result = $this->authService->AuthLogin($credentials['email'], $credentials['password']);
 
-        if ($loginResult['status']) {
-            return redirect()->intended('/dashboard')->with('success', 'Welcome back!');
-        } else {
-            return back()->with('error', $loginResult['message']);
+        if ($result['status']) {
+            return redirect()->route('dashboard');
         }
+
+        return back()->withErrors(['email' => $result['message']]);
     }
     public function dashboard()
     {

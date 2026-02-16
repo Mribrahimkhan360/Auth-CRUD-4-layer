@@ -13,7 +13,7 @@ class AuthRepository implements AuthRepositoryInterface
 {
     public function create(array $data)
     {
-        return User::created($data);
+        return User::create($data);
     }
 
     public function findByEmail(string $email)
