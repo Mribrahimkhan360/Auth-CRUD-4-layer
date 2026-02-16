@@ -23,7 +23,7 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('auth.login') }}">
+        <form action="{{ route('auth.login') }}" method="post">
             @csrf
             <div>
                 <label for="email" class="block text-gray-700 mb-1">Email</label>
