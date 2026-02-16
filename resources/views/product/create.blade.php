@@ -11,7 +11,7 @@
 <body>
 <div class="d-flex" id="wrapper">
     <div class="bg-dark text-white p-3" id="sidebar-wrapper"
-         style="min-width: 220px; min-height: 100vh;">
+         style="min-width: 221px; min-height: 100vh;">
 
         <h4 class="text-center mb-4">Dashboard</h4>
 
