@@ -52,4 +52,41 @@ class ProductController extends Controller
         return view('product.create');
     }
 
+    public function edit($id)
+    {
+        $product = $this->productService->getProductById($id);
+        return view('product.edit', compact('product'));
+    }
+
+    public function update(ProductRequest $request, $id)
+    {
+
+        $data = $request->validated(); // safer than all()
+
+        // featured checkbox handle
+        $data['featured'] = $request->has('featured') ? 1 : 0;
+
+        // image check
+        if ($request->hasFile('image')) {
+            // old image delete korle bhalo
+            $product = $this->productService->getProductById($id);
+            if ($product->image && \Storage::disk('public')->exists($product->image)) {
+                \Storage::disk('public')->delete($product->image);
+            }
+
+            // new image upload
+            $data['image'] = $request->file('image')->store('products','public');
+        }
+
+        $this->productService->updateProduct($id,$data);
+
+        return redirect()->back()->with('success','Product updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $this->productService->deleteProduct($id);
+        return redirect()->back()->with('success','Product Deleted');
+    }
+
 }

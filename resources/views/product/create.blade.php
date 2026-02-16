@@ -25,7 +25,7 @@
 
             <li>
                 <a href="{{url('products')}}" class="nav-link text-white">
-                    <i class="bi bi-person me-3"></i>Add Product
+                    <i class="bi bi-person me-3"></i>Product
                 </a>
             </li>
 
