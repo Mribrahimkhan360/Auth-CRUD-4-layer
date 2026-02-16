@@ -24,14 +24,17 @@ class AuthController extends Controller
     {
         $email = $request->email;
         $password = $request->password;
-        $remember = $request->has('remember');
 
-        $loginResult = $this->authService->AuthLogin($email, $password, $remember);
+        $loginResult = $this->authService->AuthLogin($email, $password);
 
         if ($loginResult['status']) {
             return redirect()->intended('/dashboard')->with('success', 'Welcome back!');
         } else {
             return back()->with('error', $loginResult['message']);
         }
+    }
+    public function dashboard()
+    {
+        return view('product.index');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Repositories;
+namespace App\Repositories\Contracts;
 
 
-class AuthRepositoryInterface
+interface AuthRepositoryInterface
 {
     public function create(array $data);
     public function findByEmail(string $email);

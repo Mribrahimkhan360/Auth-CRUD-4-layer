@@ -13,6 +13,16 @@
         <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">
             Welcome to login CRUD
         </h1>
+        <!-- Error Message -->
+        @if ($errors->any())
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                <ul class="list-disc pl-5">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ route('auth.login') }}">
             @csrf
             <div>

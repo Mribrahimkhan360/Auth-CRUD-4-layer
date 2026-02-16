@@ -4,7 +4,7 @@
 namespace App\Services;
 
 
-use App\Repositories\AuthRepositoryInterface;
+use App\Repositories\Contracts\AuthRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,12 +18,11 @@ class AuthService
     }
 
 
-    public function AuthLogin(string $email, string $password, bool $remember = false) // loginUser
+    public function AuthLogin(string $email, string $password) // loginUser
     {
         $user = $this->authRepository->findByEmail($email);
 
         if ($user && Hash::check($password, $user->password)) {
-            Auth::login($user, $remember); // This actually logs in the user
             return ['status' => true, 'message' => 'Login successful'];
         }
 
