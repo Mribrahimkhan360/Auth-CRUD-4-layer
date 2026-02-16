@@ -15,4 +15,4 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/',[AuthController::class,'index']);
-Route::post('/',[AuthController::class,'login'])->name('auth.login');
+Route::post('/',[AuthController::class,'authLogin'])->name('auth.login');
