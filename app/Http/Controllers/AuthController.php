@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AuthLoginRequest;
 use App\Repositories\Eloquent\AuthRepository;
 use App\Services\AuthService;
+use App\Services\ProductService;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -40,8 +41,9 @@ class AuthController extends Controller
 
         return redirect('/');
     }
-    public function dashboard()
+    public function dashboard(ProductService $productService)
     {
-        return view('product.index');
+        $products = $productService->getAllProducts();
+        return view('product.index',compact('products'));
     }
 }

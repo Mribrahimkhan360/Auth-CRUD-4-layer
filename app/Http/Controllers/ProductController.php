@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->productService->getAllProducts();
-        return view('products.index', compact('products'));
+        return view('product.index', compact('products'));
     }
 
 
@@ -39,6 +39,17 @@ class ProductController extends Controller
         $this->productService->createProduct($data);
 
         return redirect()->back()->with('success','Product Added Successfully!');
+    }
+
+    public function product()
+    {
+        $products =$this->productService->getAllProducts();
+        return view('product.index',compact('products'));
+    }
+
+    public function create()
+    {
+        return view('product.create');
     }
 
 }
