@@ -21,6 +21,7 @@ class Product extends Model
         'status',
         'featured',
         'short_description',
-        'description'
+        'description',
+        'has_discount',
     ];
 }

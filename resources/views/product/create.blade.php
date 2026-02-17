@@ -113,14 +113,26 @@
 
                             <!-- Price -->
                             <div class="col-md-4 mb-3">
-                                <label class="form-label">Price ($)</label>
-                                <input type="number" name="price" class="form-control" placeholder="0.00" required>
+                                <label for="" class="form-label">Discount Type</label>
+                                <select wire:model="discount_type">
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+
+                                @if($discount_type == 1)
+                                    <div>
+                                        <label>Discount Price</label>
+                                        <input type="number" wire:model="discount_price" placeholder="Enter discount price">
+                                        @error('discount_price') <span class="text-red-500">{{ $message }}</span> @enderror
+                                    </div>
+                                @endif
+
                             </div>
 
                             <!-- Discount Price -->
                             <div class="col-md-4 mb-3">
                                 <label class="form-label">Discount Price ($)</label>
-                                <input type="number" class="form-control" placeholder="0.00">
+                                <input type="number"  class="form-control" placeholder="0.00">
                             </div>
 
                             <!-- Stock -->

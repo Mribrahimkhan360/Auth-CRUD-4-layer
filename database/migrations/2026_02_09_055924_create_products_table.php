@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('brand')->nullable();
             $table->decimal('price',10,2);
+            $table->boolean('has_discount')->default(false); // Yes/No
             $table->string('discount_price',10,2)->nullable();
             $table->integer('stock');
             $table->string('image')->nullable();
