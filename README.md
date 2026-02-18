@@ -165,7 +165,11 @@ class ProductDiscount extends Component
 
     public function render()
     {
+<<<<<<< HEAD
         return view('components.product-discount');
+=======
+        return view('livewire.product-discount');
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     }
 }
 ```

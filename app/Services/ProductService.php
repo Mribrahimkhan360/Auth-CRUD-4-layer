@@ -29,9 +29,12 @@ class ProductService
 
     public function createProduct(array  $data)
     {
+<<<<<<< HEAD
         if (isset($data['discount_type']) && $data['discount_type'] == 0) {
             $data['discount_price'] = null;
         }
+=======
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
         return $this->productRepository->create($data);
     }
 

@@ -15,7 +15,11 @@ return [
 
     'component_locations' => [
         resource_path('views/components'),
+<<<<<<< HEAD
         resource_path('views/components'),
+=======
+        resource_path('views/livewire'),
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     ],
 
     /*
@@ -39,7 +43,11 @@ return [
     | Page Layout
     |---------------------------------------------------------------------------
     | The view that will be used as the layout when rendering a single component as
+<<<<<<< HEAD
     | an entire page via `Route::components('/post/create', 'pages::create-post')`.
+=======
+    | an entire page via `Route::livewire('/post/create', 'pages::create-post')`.
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     | In this case, the content of pages::create-post will render into $slot.
     |
     */
@@ -97,7 +105,11 @@ return [
     |---------------------------------------------------------------------------
     |
     | This value is used to specify the path where Livewire component class files
+<<<<<<< HEAD
     | are created when running creation commands like `artisan make:components`.
+=======
+    | are created when running creation commands like `artisan make:livewire`.
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     | This path is customizable to match your projects directory structure.
     |
     */
@@ -110,12 +122,20 @@ return [
     |---------------------------------------------------------------------------
     |
     | This value is used to specify where Livewire component Blade templates are
+<<<<<<< HEAD
     | stored when running file creation commands like `artisan make:components`.
+=======
+    | stored when running file creation commands like `artisan make:livewire`.
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     | It is also used if you choose to omit a component's render() method.
     |
     */
 
+<<<<<<< HEAD
     'view_path' => resource_path('views/components'),
+=======
+    'view_path' => resource_path('views/livewire'),
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
 
     /*
     |---------------------------------------------------------------------------
@@ -131,7 +151,11 @@ return [
     'temporary_file_upload' => [
         'disk' => env('LIVEWIRE_TEMPORARY_FILE_UPLOAD_DISK'), // Example: 'local', 's3'             | Default: 'default'
         'rules' => null,                                      // Example: ['file', 'mimes:png,jpg'] | Default: ['required', 'file', 'max:12288'] (12MB)
+<<<<<<< HEAD
         'directory' => null,                                  // Example: 'tmp'                     | Default: 'components-tmp'
+=======
+        'directory' => null,                                  // Example: 'tmp'                     | Default: 'livewire-tmp'
+>>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
         'middleware' => null,                                 // Example: 'throttle:5,1'            | Default: 'throttle:60,1'
         'preview_mimes' => [                                  // Supported file types for temporary pre-signed file URLs...
             'png', 'gif', 'bmp', 'svg', 'wav', 'mp4',
