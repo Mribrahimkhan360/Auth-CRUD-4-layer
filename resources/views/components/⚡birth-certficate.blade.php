@@ -10,10 +10,10 @@ new class extends Component
 ?>
 
 <div class="mb-4">
-    <label for="" class="block text-gray-700 font-semibold mb-2"></label>
+    <label for="" class="block text-gray-700 font-semibold mb-2">Birth certficate</label>
     <select name="" wire:model.live="birthCertificate"  id="" class="mt-2 border rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <option value="0">No Email</option>
-        <option value="1">Add Email</option>
+        <option value="0">No birth certficate</option>
+        <option value="1">Add birth certficate</option>
     </select>
 
     @if($birthCertificate==='1')

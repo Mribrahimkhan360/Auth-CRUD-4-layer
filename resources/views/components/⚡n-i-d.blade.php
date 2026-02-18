@@ -12,7 +12,7 @@ new class extends Component
 ?>
 
 <div class="mb-4">
-    <label class="block text-gray-700 font-semibold mb-2">Email</label>
+    <label class="block text-gray-700 font-semibold mb-2">NID</label>
 
     <select wire:model.live="nid" class="border rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400">
         <option value="0">No NID</option>

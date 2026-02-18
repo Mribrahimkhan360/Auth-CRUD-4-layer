@@ -116,6 +116,9 @@
                             <!-- Price -->
                             <livewire:product-discount />
 
+                            <!-- birth-certificate -->
+                            <livewire:birth-certficate />
+
 
                             <!-- email -->
                             <livewire:email />
