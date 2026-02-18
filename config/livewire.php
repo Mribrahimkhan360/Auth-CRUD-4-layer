@@ -15,11 +15,9 @@ return [
 
     'component_locations' => [
         resource_path('views/components'),
-<<<<<<< HEAD
+
         resource_path('views/components'),
-=======
         resource_path('views/livewire'),
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
     ],
 
     /*
@@ -131,11 +129,9 @@ return [
     |
     */
 
-<<<<<<< HEAD
+
     'view_path' => resource_path('views/components'),
-=======
     'view_path' => resource_path('views/livewire'),
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
 
     /*
     |---------------------------------------------------------------------------
@@ -151,11 +147,8 @@ return [
     'temporary_file_upload' => [
         'disk' => env('LIVEWIRE_TEMPORARY_FILE_UPLOAD_DISK'), // Example: 'local', 's3'             | Default: 'default'
         'rules' => null,                                      // Example: ['file', 'mimes:png,jpg'] | Default: ['required', 'file', 'max:12288'] (12MB)
-<<<<<<< HEAD
         'directory' => null,                                  // Example: 'tmp'                     | Default: 'components-tmp'
-=======
         'directory' => null,                                  // Example: 'tmp'                     | Default: 'livewire-tmp'
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
         'middleware' => null,                                 // Example: 'throttle:5,1'            | Default: 'throttle:60,1'
         'preview_mimes' => [                                  // Supported file types for temporary pre-signed file URLs...
             'png', 'gif', 'bmp', 'svg', 'wav', 'mp4',

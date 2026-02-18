@@ -7,7 +7,6 @@ new class extends Component
     public $emailOption = null; // dropdown value: 0 = Yes, 1 = No
     public $nid = '';          // email input value
 
-    // Automatically clear email if "No" is selected
 
 };
 ?>

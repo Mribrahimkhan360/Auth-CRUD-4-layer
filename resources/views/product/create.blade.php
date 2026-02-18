@@ -7,10 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<<<<<<< HEAD
     @livewireStyles
-=======
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
 </head>
 <body>
 <div class="d-flex" id="wrapper">
@@ -115,12 +112,6 @@
                                 </select>
                             </div>
 
-<<<<<<< HEAD
-{{--                            <!-- Price -->--}}
-{{--                            <div class="col-md-4 mb-3">--}}
-{{--                                <label class="form-label"> Price ($)</label>--}}
-{{--                                <input type="number" wire:model.live="price"  class="form-control" placeholder="0.00 tk" name="price">--}}
-{{--                            </div>--}}
 
                             <!-- Price -->
                             <livewire:product-discount />
@@ -131,31 +122,15 @@
 
                             <!-- NID -->
                             <livewire:n-i-d />
-=======
-                            <!-- Price -->
-                            <div class="col-md-4 mb-3">
-                                <label for="" class="form-label">Discount Type</label>
-                                <select wire:model="discount_type">
-                                    <option value="0">No</option>
-                                    <option value="1">Yes</option>
-                                </select>
 
-                                @if($discount_type == 1)
-                                    <div>
-                                        <label>Discount Price</label>
-                                        <input type="number" wire:model="discount_price" placeholder="Enter discount price">
-                                        @error('discount_price') <span class="text-red-500">{{ $message }}</span> @enderror
-                                    </div>
-                                @endif
-
-                            </div>
+                            <!-- spouse -->
+                            <livewire:spouse />
 
                             <!-- Discount Price -->
                             <div class="col-md-4 mb-3">
                                 <label class="form-label">Discount Price ($)</label>
                                 <input type="number"  class="form-control" placeholder="0.00">
                             </div>
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
 
                             <!-- Stock -->
                             <div class="col-md-4 mb-3">
@@ -178,10 +153,6 @@
                                 </select>
                             </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
                             <!-- Featured -->
                             <div class="col-12 mb-3">
                                 <div class="form-check">
@@ -228,9 +199,7 @@
 
     </div>
 </div>
-<<<<<<< HEAD
+
 @livewireScripts
-=======
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
 </body>
 </html>

@@ -36,13 +36,10 @@ class ProductController extends Controller
             $data['image'] = $filename;
         }
 
-<<<<<<< HEAD
         if (isset($data['discount_type']) && $data['discount_type'] == 0) {
             $data['discount_price'] = null;
         }
 
-=======
->>>>>>> 0cc88cd26b634a398c983d8955ffb73ea96b4b80
         $this->productService->createProduct($data);
 
         return redirect()->back()->with('success','Product Added Successfully!');
